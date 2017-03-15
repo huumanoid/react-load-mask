@@ -22,7 +22,9 @@ export default class Loader extends React.Component {
       props.theme && `${DEFAULT_CLASS_NAME}--theme-${props.theme}`
     ].filter(notEmpty).join(' ')
 
-    return <div {...props} style={style} className={className}>
+    const renderProps = this.prepareProps(props)
+
+    return <div {...renderProps} style={style} className={className}>
       <div className={`${LOADBAR_CLASSNAME} ${LOADBAR_CLASSNAME}--1`} />
       <div className={`${LOADBAR_CLASSNAME} ${LOADBAR_CLASSNAME}--2`} />
       <div className={`${LOADBAR_CLASSNAME} ${LOADBAR_CLASSNAME}--3`} />
@@ -36,6 +38,11 @@ export default class Loader extends React.Component {
       <div className={`${LOADBAR_CLASSNAME} ${LOADBAR_CLASSNAME}--11`} />
       <div className={`${LOADBAR_CLASSNAME} ${LOADBAR_CLASSNAME}--12`} />
     </div>
+  }
+
+  prepareProps(props) {
+    const {style, className, theme, size, ...rest} = props
+    return {...rest}
   }
 }
 
