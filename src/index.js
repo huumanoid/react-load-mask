@@ -18,9 +18,16 @@ export default class LoadMask extends React.Component {
       props.theme && `${DEFAULT_CLASS_NAME}--theme-${props.theme}`
     ].filter(notEmpty).join(' ')
 
-    return <div {...props} className={className}>
+    const divRenderProps = this.prepareDivProps(props)
+
+    return <div {...divRenderProps} className={className}>
       <Loader size={props.size} theme={props.theme} />
     </div>
+  }
+
+  prepareDivProps(props) {
+    const {visible, theme, size, className, ...rest} = props
+    return {...rest}
   }
 }
 
