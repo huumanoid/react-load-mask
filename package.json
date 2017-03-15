@@ -4,7 +4,7 @@
     "email": "contact@zippyui.com"
   },
   "bugs": {
-    "url": "https://github.com/zippyui/react-load-mask/issues"
+    "url": "https://github.com/zippyui/huumanoid/issues"
   },
   "dependencies": {
     "object-assign": "^4.1.0"
@@ -37,7 +37,7 @@
     "tarball": "https://registry.npmjs.org/react-load-mask/-/react-load-mask-2.0.2.tgz"
   },
   "gitHead": "261047413d5847c5bd81641ddead8e99b462f47d",
-  "homepage": "https://github.com/zippyui/react-load-mask",
+  "homepage": "https://github.com/huumanoid/react-load-mask",
   "keywords": [
     "load",
     "mask",
@@ -66,7 +66,7 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zippyui/react-load-mask.git"
+    "url": "git+https://github.com/huumanoid/react-load-mask.git"
   },
   "scripts": {
     "babel": "babel --out-dir lib src",
@@ -77,5 +77,5 @@
     "prepublish": "npm run build",
     "styles": "theme-builder"
   },
-  "version": "2.0.2"
+  "version": "2.0.3"
 }
